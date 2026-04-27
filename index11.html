@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اكواد خصم</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.code {
+  background: linear-gradient(45deg,#ffb6c1,#d8b6ff);
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brand {
+  font-size: 13px;
+  color: #444;
+}
+
+button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.copied {
+  background: green;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="title">🔥 اكواد خصم قوية 🔥</div>
+
+<div class="card">
+  <div class="left">
+    <img src="vogacloset.png" class="logo">
+    <div>
+      <div class="code">9VTQ</div>
+      <div class="brand">Vogacloset</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'9VTQ','https://vogacloset.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="mamas.png" class="logo">
+    <div>
+      <div class="code">ADL82</div>
+      <div class="brand">Mamas & Papas</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'ADL82','https://www.mamasandpapas.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="styli.png" class="logo">
+    <div>
+      <div class="code">ADL89</div>
+      <div class="brand">Styli</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'ADL89','https://www.styli.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="noon.png" class="logo">
+    <div>
+      <div class="code">ADX257</div>
+      <div class="brand">Noon</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'ADX257','https://www.noon.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="bath.png" class="logo">
+    <div>
+      <div class="code">D9XM</div>
+      <div class="brand">Bath & Body Works</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'D9XM','https://www.bathandbodyworks.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="hm.png" class="logo">
+    <div>
+      <div class="code">DF4F</div>
+      <div class="brand">H&M</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'DF4F','https://www.hm.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="metro.png" class="logo">
+    <div>
+      <div class="code">DN50</div>
+      <div class="brand">Metro Brazil</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'DN50','https://www.metrobrazil.com')">نسخ</button>
+</div>
+
+<div class="card">
+  <div class="left">
+    <img src="izil.png" class="logo">
+    <div>
+      <div class="code">MM91</div>
+      <div class="brand">Izil Beauty</div>
+    </div>
+  </div>
+  <button onclick="copyCode(this,'MM91','https://www.izilbeauty.com')">نسخ</button>
+</div>
+
+<div class="toast" id="toast">تم نسخ الكود 🎉</div>
+
+<script>
+function copyCode(btn, code, link) {
+  navigator.clipboard.writeText(code);
+
+  btn.classList.add("copied");
+  btn.innerText = "تم النسخ";
+
+  let toast = document.getElementById("toast");
+  toast.style.display = "block";
+
+  setTimeout(() => {
+    toast.style.display = "none";
+    btn.classList.remove("copied");
+    btn.innerText = "نسخ";
+  }, 1500);
+
+  window.open(link, "_blank");
+}
+</script>
+
+</body>
+</html>
